@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Frame" name="RiskLegacyPanel">
+        <Frame type="Image" name="Background">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="Assets/Textures/ui_camapaignmenu_dialogbox_base.dds"/>
+            <TextureType val="HorizontalBorder"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="Button" name="RiskLegacyButton">
+        <NormalImage val="NormalImage"/>
+        <HoverImage val="HoverImage"/>
+        <Label val="Label"/>
+        <ClickSound val="@UI_ActionButtonSelect"/>
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        
+        <Frame type="Label" name="Label">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="55"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-55"/>
+        </Frame>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="Risk/ui_battlenet_challenge_button_normalpressed.dds"/>
+            <TextureType val="NineSlice"/>
+            <StateCount val="2"/>
+        </Frame>
+
+        <Frame type="Image" name="HoverImage">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="Risk/ui_battlenet_challenge_button_normaloverpressedover.dds"/>
+            <TextureType val="NineSlice"/>
+            <StateCount val="2"/>
+        </Frame>
+    </Frame>
+</Desc>
