@@ -11,7 +11,7 @@
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
     </Frame>
 
-  <!-- hide certain panels -->
+    <!-- hide certain panels -->
     <Frame type="ConsolePanel" name="GameUI/UIContainer/ConsolePanel" file="GameUI">
         <Frame type="Model" name="InfopanelModel">
             <Visible val="false"/>

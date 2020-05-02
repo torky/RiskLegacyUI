@@ -10,18 +10,7 @@
     <Frame type="Button" name="RiskLegacyTabButton" template="RiskLegacyUI/RiskLegacyButton">
         <Width val="#TabWidth"/>
         <Height val="#TabHeight"/>
-
-        <StateGroup name="ToggledStateGroup">
-            <DefaultState val="NotToggled"/>
-            
-            <State name="Toggled">
-                <When type="Property" toggled="true"/>
-                <Action type="SetProperty" HoverSound=""/>
-            </State>
-            
-            <State name="NotToggled">
-            </State>
-        </StateGroup>
+        <Toggleable val="True"/>
     </Frame>
 
     <Frame type="Frame" name="RiskLegacySkinPanel" template="RiskLegacyUI/RiskLegacyPanel">
@@ -29,6 +18,14 @@
         <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         <Width val="#PanelWidth"/>
         <Height val="#PanelHeight"/>
+
+        <Frame type="Pulldown" name="UnitSelect" template="StandardTemplates/StandardPulldownTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Width val="300"/>
+            <Frame type="Frame" name="Marine"></Frame>
+        </Frame>
     </Frame>
 
     <Frame type="TabControl" name="RiskLegacySkinsUI">
@@ -42,10 +39,12 @@
   
         <Frame type="Button" name="WinSkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
             <Anchor side="Left" relative="$parent/KillSkinTab" pos="Min" offset="#TabWidth"/>
+            <Text val="Wins"/>
         </Frame>
   
         <Frame type="Button" name="TourneySkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
             <Anchor side="Left" relative="$parent/WinSkinTab" pos="Min" offset="#TabWidth"/>
+            <Text val="Prizes"/>
         </Frame>
   
         <Frame type="Frame" name="KillSkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
