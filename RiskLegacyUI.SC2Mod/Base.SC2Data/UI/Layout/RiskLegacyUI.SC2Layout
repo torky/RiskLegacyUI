@@ -18,13 +18,6 @@
         <ClickSound val="@UI_ActionButtonSelect"/>
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
         <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-        
-        <Frame type="Label" name="Label">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
-            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="55"/>
-            <Anchor side="Right" relative="$parent" pos="Max" offset="-55"/>
-        </Frame>
 
         <Frame type="Image" name="NormalImage">
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
@@ -44,6 +37,14 @@
             <Texture val="Risk/ui_battlenet_challenge_button_normaloverpressedover.dds"/>
             <TextureType val="NineSlice"/>
             <StateCount val="2"/>
+        </Frame>
+                
+        <Frame type="Label" name="Label">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="55"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-55"/>
+            <Style val="RobotoCondensed15"/>
         </Frame>
     </Frame>
 </Desc>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Constant name="TabHeight" val="76"/>
+    <Constant name="TabWidth" val="170"/>
+    <Constant name="PanelHeight" val="424"/>
+    <Constant name="PanelWidth" val="510"/>
+    <Constant name="UIHeight" val="500"/>
+    <Constant name="UIWidth" val="510"/>
+
+    <Frame type="Button" name="RiskLegacyTabButton" template="RiskLegacyUI/RiskLegacyButton">
+        <Width val="#TabWidth"/>
+        <Height val="#TabHeight"/>
+
+        <StateGroup name="ToggledStateGroup">
+            <DefaultState val="NotToggled"/>
+            
+            <State name="Toggled">
+                <When type="Property" toggled="true"/>
+                <Action type="SetProperty" HoverSound=""/>
+            </State>
+            
+            <State name="NotToggled">
+            </State>
+        </StateGroup>
+    </Frame>
+
+    <Frame type="Frame" name="RiskLegacySkinPanel" template="RiskLegacyUI/RiskLegacyPanel">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Width val="#PanelWidth"/>
+        <Height val="#PanelHeight"/>
+    </Frame>
+
+    <Frame type="TabControl" name="RiskLegacySkinsUI">
+        <Width val="#UIWidth"/>
+        <Height val="#UIHeight"/>
+  
+        <Frame type="Button" name="KillSkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Text val="Kills"/>
+        </Frame>
+  
+        <Frame type="Button" name="WinSkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
+            <Anchor side="Left" relative="$parent/KillSkinTab" pos="Min" offset="#TabWidth"/>
+        </Frame>
+  
+        <Frame type="Button" name="TourneySkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
+            <Anchor side="Left" relative="$parent/WinSkinTab" pos="Min" offset="#TabWidth"/>
+        </Frame>
+  
+        <Frame type="Frame" name="KillSkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
+        <Frame type="Frame" name="WinSkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
+        <Frame type="Frame" name="TourneySkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
+  
+        <TabListItem val="KillSkinTab"/>
+        <TabListItem val="WinSkinTab"/>
+        <TabListItem val="TourneySkinTab"/>
+        <PanelListItem val="KillSkinPanel"/>
+        <PanelListItem val="WinSkinPanel"/>
+        <PanelListItem val="TourneySkinPanel"/>
+    </Frame>
+</Desc>
