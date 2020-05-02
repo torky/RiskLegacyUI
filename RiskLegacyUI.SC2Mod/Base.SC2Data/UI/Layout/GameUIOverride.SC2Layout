@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
-        <Frame type="TabControl" name="SkinsUI" template="RiskLegacySkinUI/RiskLegacySkinsUI">
+        <Frame type="TabControl" name="SkinsUI" template="Skins/SkinsUI">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>

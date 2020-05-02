@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
-    <Frame type="Frame" name="RiskLegacyPanel">
+    <Frame type="Frame" name="Panel">
         <Frame type="Image" name="Background">
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
@@ -11,7 +11,7 @@
         </Frame>
     </Frame>
 
-    <Frame type="Button" name="RiskLegacyButton">
+    <Frame type="Button" name="Button">
         <NormalImage val="NormalImage"/>
         <HoverImage val="HoverImage"/>
         <Label val="Label"/>

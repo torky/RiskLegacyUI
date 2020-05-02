@@ -7,55 +7,54 @@
     <Constant name="UIHeight" val="500"/>
     <Constant name="UIWidth" val="510"/>
 
-    <Frame type="Button" name="RiskLegacyTabButton" template="RiskLegacyUI/RiskLegacyButton">
+    <Frame type="Button" name="TabButton" template="Basics/Button">
         <Width val="#TabWidth"/>
         <Height val="#TabHeight"/>
         <Toggleable val="True"/>
     </Frame>
 
-    <Frame type="Frame" name="RiskLegacySkinPanel" template="RiskLegacyUI/RiskLegacyPanel">
+    <Frame type="Frame" name="SkinPanel" template="Basics/Panel">
         <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
         <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         <Width val="#PanelWidth"/>
         <Height val="#PanelHeight"/>
 
         <Frame type="Pulldown" name="UnitSelect" template="StandardTemplates/StandardPulldownTemplate">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="20"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
             <Width val="300"/>
-            <Frame type="Frame" name="Marine"></Frame>
         </Frame>
     </Frame>
 
-    <Frame type="TabControl" name="RiskLegacySkinsUI">
+    <Frame type="TabControl" name="SkinsUI">
         <Width val="#UIWidth"/>
         <Height val="#UIHeight"/>
   
-        <Frame type="Button" name="KillSkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
+        <Frame type="Button" name="KillSkinTab" template="Skins/TabButton">
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
             <Text val="Kills"/>
         </Frame>
   
-        <Frame type="Button" name="WinSkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
+        <Frame type="Button" name="WinSkinTab" template="Skins/TabButton">
             <Anchor side="Left" relative="$parent/KillSkinTab" pos="Min" offset="#TabWidth"/>
             <Text val="Wins"/>
         </Frame>
   
-        <Frame type="Button" name="TourneySkinTab" template="RiskLegacySkinUI/RiskLegacyTabButton">
+        <Frame type="Button" name="PrizeSkinTab" template="Skins/TabButton">
             <Anchor side="Left" relative="$parent/WinSkinTab" pos="Min" offset="#TabWidth"/>
             <Text val="Prizes"/>
         </Frame>
   
-        <Frame type="Frame" name="KillSkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
-        <Frame type="Frame" name="WinSkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
-        <Frame type="Frame" name="TourneySkinPanel" template="RiskLegacySkinUI/RiskLegacySkinPanel"></Frame>
+        <Frame type="Frame" name="KillSkinPanel" template="Skins/SkinPanel"></Frame>
+        <Frame type="Frame" name="WinSkinPanel" template="Skins/SkinPanel"></Frame>
+        <Frame type="Frame" name="PrizeSkinPanel" template="Skins/SkinPanel"></Frame>
   
         <TabListItem val="KillSkinTab"/>
         <TabListItem val="WinSkinTab"/>
-        <TabListItem val="TourneySkinTab"/>
+        <TabListItem val="PrizeSkinTab"/>
         <PanelListItem val="KillSkinPanel"/>
         <PanelListItem val="WinSkinPanel"/>
-        <PanelListItem val="TourneySkinPanel"/>
+        <PanelListItem val="PrizeSkinPanel"/>
     </Frame>
 </Desc>
