@@ -6,10 +6,10 @@
     <Constant name="PanelWidth" val="510"/>
     <Constant name="UIHeight" val="250"/>
     <Constant name="UIWidth" val="510"/>
-    <Constant name="SkinButtonHeight" val="80"/>
-    <Constant name="SkinButtonWidth" val="86"/>
-    <Constant name="SkinButtonSideMargin" val="5"/>
-    <Constant name="SkinButtonTopMargin" val="2"/>
+    <Constant name="SkinButtonHeight" val="84"/>
+    <Constant name="SkinButtonWidth" val="91"/>
+    <Constant name="SkinButtonSideMargin" val="7"/>
+    <Constant name="SkinButtonTopMargin" val="4"/>
     <Constant name="TopMargin" val="20"/>
     <Constant name="SideMargin" val="39"/>
     <Constant name="ButtonTopMargin" val="76"/>
