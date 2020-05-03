@@ -6,10 +6,12 @@
     <Constant name="PanelWidth" val="510"/>
     <Constant name="UIHeight" val="250"/>
     <Constant name="UIWidth" val="510"/>
-    <Constant name="SkinButtonHeight" val="76"/>
+    <Constant name="SkinButtonHeight" val="80"/>
     <Constant name="SkinButtonWidth" val="86"/>
+    <Constant name="SkinButtonSideMargin" val="5"/>
+    <Constant name="SkinButtonTopMargin" val="2"/>
     <Constant name="TopMargin" val="20"/>
-    <Constant name="SideMargin" val="40"/>
+    <Constant name="SideMargin" val="39"/>
     <Constant name="ButtonTopMargin" val="76"/>
 
     <Frame type="Button" name="TabButton" template="Basics/Button">
@@ -21,6 +23,11 @@
     <Frame type="Button" name="SkinButton" template="Basics/Button">
         <Height val="#SkinButtonHeight"/>
         <Width val="#SkinButtonWidth"/>
+        <Frame type="Image" name="InnerImage">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="#SkinButtonTopMargin"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#SkinButtonSideMargin"/>
+            <Texture val=""/>
+        </Frame>
         <Visible val="True"/>
     </Frame>
 

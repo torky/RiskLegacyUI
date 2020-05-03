@@ -22,12 +22,12 @@
             <Visible val="True"/>
         </Frame>    
 
-        <Frame type="Button" name="LogButton" template="Basics/Button">
+        <Frame type="Button" name="LogsButton" template="Basics/Button">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-27"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
             <Width val="144"/>
             <Height val="86"/>
-            <Text val="Log"/>
+            <Text val="Logs"/>
             <RenderPriority val="520"/>
             <Visible val="True"/>
         </Frame>
@@ -37,7 +37,6 @@
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>
 
-        
     </Frame>
 
     <Frame type="ResourcePanel" name="GameUI/UIContainer/FullscreenUpperContainer/ResourcePanel" file="GameUI">
