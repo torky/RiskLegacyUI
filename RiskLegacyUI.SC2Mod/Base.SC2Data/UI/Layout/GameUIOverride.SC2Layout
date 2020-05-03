@@ -44,14 +44,6 @@
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
     </Frame>
 
-
-    <!-- InitializeBasicButton(buttons.profile, "Profile", 136, 86, c_anchorBottomLeft, 372, 117, null);
-    SetDefaultButtonBorderImage(buttons.profile.screenButtonID);
-    InitializeBasicButton(buttons.log, "Log", 136, 86, c_anchorBottomLeft, 372, 26, null);
-    SetDefaultButtonBorderImage(buttons.log.screenButtonID);
-    InitializeBasicButton(buttons.skins, "Skins", 136, 86, c_anchorBottomLeft, 372, 208, null);
-    SetDefaultButtonBorderImage(buttons.skins.screenButtonID); -->
-
     <!-- hide certain panels -->
     <Frame type="ConsolePanel" name="GameUI/UIContainer/ConsolePanel" file="GameUI">
         <Frame type="Model" name="InfopanelModel">
@@ -302,12 +294,12 @@
                     <RenderPriority val="1000" />
                     <StateGroup name="UpdateAnchor">
                         <State name="Visible">
-                        <When type="Property" frame="$this" Visible="True" />
-                        <Action type="SetAnchor" frame="$this" side="Bottom" relative="$this" pos="Max" offset="0" />
+                            <When type="Property" frame="$this" Visible="True" />
+                            <Action type="SetAnchor" frame="$this" side="Bottom" relative="$this" pos="Max" offset="0" />
                         </State>
                         <State name="Hidden">
-                        <When type="Property" frame="$this" Visible="False" />
-                        <Action type="SetAnchor" frame="$this" side="Bottom" relative="$this" pos="Max" offset="0" />
+                            <When type="Property" frame="$this" Visible="False" />
+                            <Action type="SetAnchor" frame="$this" side="Bottom" relative="$this" pos="Max" offset="0" />
                         </State>
                     </StateGroup>
                 </Frame>
