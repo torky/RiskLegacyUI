@@ -46,4 +46,12 @@
             <Color val="149,202,255"/>
         </Frame>
     </Frame>
+
+    <Frame type="Button" name="ToggleButton" template="Basics/Button">
+        <Toggleable val="True"/>
+        <RenderPriority val="520"/>
+        <Visible val="True"/>
+        <Width val="144"/>
+        <Height val="86"/>
+    </Frame>
 </Desc>

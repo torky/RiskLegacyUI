@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
-
-        <Frame type="Button" name="SkinsButton" template="Basics/Button">
+        <Frame type="Button" name="SkinsButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-207"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
-            <Width val="144"/>
-            <Height val="86"/>
             <Text val="Skins"/>
-            <RenderPriority val="520"/>
-            <Visible val="True"/>
         </Frame>
 
-        <Frame type="Button" name="ProfileButton" template="Basics/Button">
+        <Frame type="Button" name="ProfileButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-117"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
-            <Width val="144"/>
-            <Height val="86"/>
             <Text val="Profile"/>
-            <RenderPriority val="520"/>
-            <Visible val="True"/>
         </Frame>    
 
-        <Frame type="Button" name="LogsButton" template="Basics/Button">
+        <Frame type="Button" name="LogsButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-27"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
-            <Width val="144"/>
-            <Height val="86"/>
             <Text val="Logs"/>
-            <RenderPriority val="520"/>
-            <Visible val="True"/>
         </Frame>
 
         <Frame type="TabControl" name="SkinsUI" template="Skins/SkinsUI">
@@ -37,6 +24,49 @@
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>
 
+        <Animation name="SkinsToggle">
+            <Event event="OnMouseUp" action="Restart, Play" frame="$this/SkinsButton"/>
+
+            <Controller type="Property" property="Toggled" end="Pause" frame="$this/ProfileButton">
+                <Key type="Property" time="0" value="false"/>
+            </Controller>
+            <Controller type="Property" property="Toggled" end="Pause" frame="$this/LogsButton">
+                <Key type="Property" time="0" value="false"/>
+            </Controller>
+        </Animation>
+
+        <Animation name="ProfileToggle">
+            <Event event="OnMouseUp" action="Restart, Play" frame="$this/ProfileButton"/>
+
+            <Controller type="Property" property="Toggled" end="Pause" frame="$this/SkinsButton">
+                <Key type="Property" time="0" value="false"/>
+            </Controller>
+            <Controller type="Property" property="Toggled" end="Pause" frame="$this/LogsButton">
+                <Key type="Property" time="0" value="false"/>
+            </Controller>
+        </Animation>
+
+        <Animation name="LogsToggle">
+            <Event event="OnMouseUp" action="Restart, Play" frame="$this/LogsButton"/>
+
+            <Controller type="Property" property="Toggled" end="Pause" frame="$this/ProfileButton">
+                <Key type="Property" time="0" value="false"/>
+            </Controller>
+            <Controller type="Property" property="Toggled" end="Pause" frame="$this/SkinsButton">
+                <Key type="Property" time="0" value="false"/>
+            </Controller>
+        </Animation>
+
+        <StateGroup name="StateGroup">
+            <State name="Skin">
+                <When type="Property" frame="$this/SkinsButton" Toggled="True"/>
+                <Action type="SetProperty" frame="$this/SkinsUI" Visible="True"/>
+            </State>
+            <State name="SkinOff">
+                <When type="Property" frame="$this/SkinsButton" Toggled="False"/>
+                <Action type="SetProperty" frame="$this/SkinsUI" Visible="False"/>
+            </State>
+        </StateGroup>
     </Frame>
 
     <Frame type="ResourcePanel" name="GameUI/UIContainer/FullscreenUpperContainer/ResourcePanel" file="GameUI">
