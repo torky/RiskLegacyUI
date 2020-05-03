@@ -2,15 +2,26 @@
 <Desc>
     <Constant name="TabHeight" val="76"/>
     <Constant name="TabWidth" val="170"/>
-    <Constant name="PanelHeight" val="424"/>
+    <Constant name="PanelHeight" val="174"/>
     <Constant name="PanelWidth" val="510"/>
-    <Constant name="UIHeight" val="500"/>
+    <Constant name="UIHeight" val="250"/>
     <Constant name="UIWidth" val="510"/>
+    <Constant name="SkinButtonHeight" val="76"/>
+    <Constant name="SkinButtonWidth" val="86"/>
+    <Constant name="TopMargin" val="20"/>
+    <Constant name="SideMargin" val="40"/>
+    <Constant name="ButtonTopMargin" val="76"/>
 
     <Frame type="Button" name="TabButton" template="Basics/Button">
         <Width val="#TabWidth"/>
         <Height val="#TabHeight"/>
         <Toggleable val="True"/>
+    </Frame>
+
+    <Frame type="Button" name="SkinButton" template="Basics/Button">
+        <Height val="#SkinButtonHeight"/>
+        <Width val="#SkinButtonWidth"/>
+        <Visible val="True"/>
     </Frame>
 
     <Frame type="Frame" name="SkinPanel" template="Basics/Panel">
@@ -20,10 +31,35 @@
         <Height val="#PanelHeight"/>
 
         <Frame type="Pulldown" name="UnitSelect" template="StandardTemplates/StandardPulldownTemplate">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="20"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="#TopMargin"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
             <Width val="300"/>
+        </Frame>
+
+        <Frame type="Button" name="Button0" template="Skins/SkinButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="#ButtonTopMargin"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#SideMargin"/>
+        </Frame>
+
+        <Frame type="Button" name="Button1" template="Skins/SkinButton">
+            <Anchor side="Top" relative="$parent/Button0" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/Button0" pos="Max" offset="0"/>
+        </Frame>
+
+        <Frame type="Button" name="Button2" template="Skins/SkinButton">
+            <Anchor side="Top" relative="$parent/Button1" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/Button1" pos="Max" offset="0"/>
+        </Frame>
+
+        <Frame type="Button" name="Button3" template="Skins/SkinButton">
+            <Anchor side="Top" relative="$parent/Button2" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/Button2" pos="Max" offset="0"/>
+        </Frame>
+
+        <Frame type="Button" name="Button4" template="Skins/SkinButton">
+            <Anchor side="Top" relative="$parent/Button3" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/Button3" pos="Max" offset="0"/>
         </Frame>
     </Frame>
 

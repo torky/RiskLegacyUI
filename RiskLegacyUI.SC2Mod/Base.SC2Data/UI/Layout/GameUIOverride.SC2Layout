@@ -242,7 +242,7 @@
         <Visible val="false"/>
     </Frame>
 
-  <!-- Chat -->
+    <!-- Chat -->
     <Frame type="Frame" name="GameUI/UIContainer/FullscreenUpperContainer" file="GameUI">
         <Frame type="GameMessageDisplay" name="ChatDisplay">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-240"/>
