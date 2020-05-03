@@ -16,8 +16,6 @@
         <HoverImage val="HoverImage"/>
         <Label val="Label"/>
         <ClickSound val="@UI_ActionButtonSelect"/>
-        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
 
         <Frame type="Image" name="NormalImage">
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
@@ -42,8 +40,8 @@
         <Frame type="Label" name="Label">
             <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="55"/>
-            <Anchor side="Right" relative="$parent" pos="Max" offset="-55"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
             <Style val="RobotoCondensed15"/>
         </Frame>
     </Frame>

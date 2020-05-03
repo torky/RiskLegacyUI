@@ -68,16 +68,19 @@
         <Height val="#UIHeight"/>
   
         <Frame type="Button" name="KillSkinTab" template="Skins/TabButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
             <Text val="Kills"/>
         </Frame>
   
         <Frame type="Button" name="WinSkinTab" template="Skins/TabButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$parent/KillSkinTab" pos="Min" offset="#TabWidth"/>
             <Text val="Wins"/>
         </Frame>
   
         <Frame type="Button" name="PrizeSkinTab" template="Skins/TabButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$parent/WinSkinTab" pos="Min" offset="#TabWidth"/>
             <Text val="Prizes"/>
         </Frame>

@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
+
+        <Frame type="Button" name="SkinsButton" template="Basics/Button">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-207"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
+            <Width val="144"/>
+            <Height val="86"/>
+            <Text val="Skins"/>
+            <RenderPriority val="520"/>
+            <Visible val="True"/>
+        </Frame>
+
+        <Frame type="Button" name="ProfileButton" template="Basics/Button">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-117"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
+            <Width val="144"/>
+            <Height val="86"/>
+            <Text val="Profile"/>
+            <RenderPriority val="520"/>
+            <Visible val="True"/>
+        </Frame>    
+
+        <Frame type="Button" name="LogButton" template="Basics/Button">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-27"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
+            <Width val="144"/>
+            <Height val="86"/>
+            <Text val="Log"/>
+            <RenderPriority val="520"/>
+            <Visible val="True"/>
+        </Frame>
+
         <Frame type="TabControl" name="SkinsUI" template="Skins/SkinsUI">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>
+
+        
     </Frame>
 
     <Frame type="ResourcePanel" name="GameUI/UIContainer/FullscreenUpperContainer/ResourcePanel" file="GameUI">
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
     </Frame>
+
+
+    <!-- InitializeBasicButton(buttons.profile, "Profile", 136, 86, c_anchorBottomLeft, 372, 117, null);
+    SetDefaultButtonBorderImage(buttons.profile.screenButtonID);
+    InitializeBasicButton(buttons.log, "Log", 136, 86, c_anchorBottomLeft, 372, 26, null);
+    SetDefaultButtonBorderImage(buttons.log.screenButtonID);
+    InitializeBasicButton(buttons.skins, "Skins", 136, 86, c_anchorBottomLeft, 372, 208, null);
+    SetDefaultButtonBorderImage(buttons.skins.screenButtonID); -->
 
     <!-- hide certain panels -->
     <Frame type="ConsolePanel" name="GameUI/UIContainer/ConsolePanel" file="GameUI">
