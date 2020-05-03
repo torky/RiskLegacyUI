@@ -43,6 +43,7 @@
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
             <Style val="RobotoCondensed15"/>
+            <Color val="149,202,255"/>
         </Frame>
     </Frame>
 </Desc>
