@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
+    <Constant name="TabHeight" val="76"/>
+    <Constant name="UIWidth" val="510"/>
+
     <Frame type="Frame" name="Panel">
         <Frame type="Image" name="Background">
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
@@ -53,5 +56,10 @@
         <Visible val="True"/>
         <Width val="144"/>
         <Height val="86"/>
+    </Frame>
+
+    <Frame type="Button" name="TabButton" template="Basics/Button">
+        <Height val="#TabHeight"/>
+        <Toggleable val="True"/>
     </Frame>
 </Desc>

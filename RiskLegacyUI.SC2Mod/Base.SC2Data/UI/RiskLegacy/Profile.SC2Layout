@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Constant name="ProfileTabWidth" val="255"/>
+    <Constant name="ProfileUIHeight" val="400"/>
+    <Constant name="ProfilePanelUIHeight" val="324"/>
+
+    <Frame type="Frame" name="ProfilePanel" template="Basics/Panel">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Width val="#UIWidth"/>
+        <Height val="#ProfilePanelUIHeight"/>
+    </Frame>
+
+    <Frame type="TabControl" name="ProfileUI">
+        <Width val="#UIWidth"/>
+        <Height val="#ProfileUIHeight"/>
+
+        <Frame type="Button" name="StatsTab" template="Basics/TabButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Width val="#ProfileTabWidth"/>
+            <Text val="Stats"/>
+        </Frame>
+
+        <Frame type="Button" name="SettingsTab" template="Basics/TabButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/StatsTab" pos="Min" offset="#ProfileTabWidth"/>
+            <Width val="#ProfileTabWidth"/>
+            <Text val="Settings"/>
+        </Frame>
+
+        <Frame type="Frame" name="StatsPanel" template="Profile/ProfilePanel"></Frame>
+        <Frame type="Frame" name="SettingsPanel" template="Profile/ProfilePanel"></Frame>
+
+        <TabListItem val="StatsTab"/>
+        <TabListItem val="SettingsTab"/>
+        <PanelListItem val="StatsPanel"/>
+        <PanelListItem val="SettingsPanel"/>
+    </Frame>
+</Desc>

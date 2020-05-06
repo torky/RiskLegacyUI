@@ -24,6 +24,16 @@
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>
 
+        <Frame type="TabControl" name="ProfileUI" template="Profile/ProfileUI">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+
+        <Frame type="TabControl" name="LogsUI" template="Logs/LogsUI">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+
         <Animation name="SkinsToggle">
             <Event event="OnMouseUp" action="Restart, Play" frame="$this/SkinsButton"/>
 
@@ -57,14 +67,34 @@
             </Controller>
         </Animation>
 
-        <StateGroup name="StateGroup">
-            <State name="Skin">
+        <StateGroup name="SkinsGroup">
+            <State name="Skins">
                 <When type="Property" frame="$this/SkinsButton" Toggled="True"/>
                 <Action type="SetProperty" frame="$this/SkinsUI" Visible="True"/>
             </State>
-            <State name="SkinOff">
+            <State name="SkinsOff">
                 <When type="Property" frame="$this/SkinsButton" Toggled="False"/>
                 <Action type="SetProperty" frame="$this/SkinsUI" Visible="False"/>
+            </State>
+        </StateGroup>
+        <StateGroup name="ProfileGroup">
+            <State name="Profile">
+                <When type="Property" frame="$this/ProfileButton" Toggled="True"/>
+                <Action type="SetProperty" frame="$this/ProfileUI" Visible="True"/>
+            </State>
+            <State name="ProfileOff">
+                <When type="Property" frame="$this/ProfileButton" Toggled="False"/>
+                <Action type="SetProperty" frame="$this/ProfileUI" Visible="False"/>
+            </State>
+        </StateGroup>
+        <StateGroup name="LogsGroup">
+            <State name="Logs">
+                <When type="Property" frame="$this/LogsButton" Toggled="True"/>
+                <Action type="SetProperty" frame="$this/LogsUI" Visible="True"/>
+            </State>
+            <State name="LogsOff">
+                <When type="Property" frame="$this/LogsButton" Toggled="False"/>
+                <Action type="SetProperty" frame="$this/LogsUI" Visible="False"/>
             </State>
         </StateGroup>
     </Frame>
