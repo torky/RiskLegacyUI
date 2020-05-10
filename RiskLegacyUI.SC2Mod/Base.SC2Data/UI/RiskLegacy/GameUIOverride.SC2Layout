@@ -3,6 +3,7 @@
     <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
         <Frame type="Image" name="CurrencyBar" template="CurrencyBar/CurrencyBarBackground"></Frame>
         
+        <!-- Skins, Profile, and Logs UI-->
         <Frame type="Button" name="SkinsButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-207"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
@@ -101,11 +102,12 @@
         </StateGroup>
     </Frame>
 
+    <!-- Anchor Resource Panel-->
     <Frame type="ResourcePanel" name="GameUI/UIContainer/FullscreenUpperContainer/ResourcePanel" file="GameUI">
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
     </Frame>
 
-    <!-- hide certain panels -->
+    <!-- Hide certain panels -->
     <Frame type="ConsolePanel" name="GameUI/UIContainer/ConsolePanel" file="GameUI">
         <Frame type="Model" name="InfopanelModel">
             <Visible val="false"/>
@@ -136,8 +138,7 @@
         </Frame>
     </Frame>
   
-  <!-- Chanes left anchor from background 3 to 1-->
-  
+    <!-- Replace Resource Icons-->
     <Frame type="ResourceFrame" name="GameUI/UIContainer/FullscreenUpperContainer/ResourcePanel/ResourceFrame" file="GameUI">
         <Frame type="Image" name="SupplyBackground" template="ResourcePanel/ResourcePanelIconBackgroundTemplate">
             <Anchor side="Top" relative="$parent" pos="Min" offset="5"/>
@@ -236,7 +237,7 @@
         </Frame>
     </Frame>
 
-    <!-- Top UI -->
+    <!-- Move Objective Panel -->
     <Frame type="ObjectivePanel" name="GameUI/UIContainer/FullscreenUpperContainer/ObjectivePanel" file="GameUI">
         <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         <Anchor side="Right" relative="$parent" pos="Min" offset="660"/>
@@ -244,7 +245,7 @@
         <Anchor side="Bottom" relative="$parent" pos="Min" offset="580"/>
     </Frame>
 
-    <!-- Bottom UI -->
+    <!-- Minimap and Control Panels UI -->
     <Frame type="Frame" name="GameUI/UIContainer/ConsoleUIContainer" file="GameUI">
         <Frame type="MinimapPanel" name="MinimapPanel">
             <Width val="1500"/>
