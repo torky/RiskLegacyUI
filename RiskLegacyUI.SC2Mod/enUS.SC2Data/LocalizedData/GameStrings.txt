@@ -1,3 +1,6 @@
 ﻿DocInfo/DescLong=Completely devoid of any description whatsoever.
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Stats/WinLoss=<s val="RobotoCondensed15"><c val="9cd2ff">Wins/Losses -</c></s>
+Stats/KillDeath=<s val="RobotoCondensed15"><c val="9cd2ff">Kills/Deaths -</c></s>
+Stats/FastestWin=<s val="RobotoCondensed15"><c val="9cd2ff">Fastest Win -</c></s>

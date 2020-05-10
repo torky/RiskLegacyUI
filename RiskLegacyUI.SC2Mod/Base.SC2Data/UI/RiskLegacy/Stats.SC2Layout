@@ -6,22 +6,111 @@
     <Constant name="StatMarginLeft" val="40"/>
     <Constant name="StatMarginRight" val="-40"/>
 
+    <Frame type="DataRefFrame" name="GetPlayerFromParent">
+        <PlayerId val="{$parent/@PlayerId}"/>
+    </Frame>
+
     <Frame type="Button" name="PlayerStatButton" template="StandardTemplates/StandardGlueButton">
         <Height val="60"/>
         <Width val="60"/>
         <Label val="PlayerStat"/>
+        <Toggleable val="True"/>
+        <Text val="{PlayerInfo/@PlayerId}"/>
         <Frame type="Label" name="PlayerStat">
             <Style val="RobotoCondensed15"/>
             <DescFlags val="Internal"/>
         </Frame>
-        <Text val="{PlayerInfo/@PlayerId}"/>
         <Visible val="{PlayerInfo/@User}"/>
         <Frame type="PlayerFrame" name="PlayerInfo">
             <PlayerId val="1"/>
         </Frame>
     </Frame>
 
-    <Frame type="Frame" name="PlayerStatsButtons">
+    <Frame type="Frame" name="PlayerStatPanel">
+        <Anchor relative="$parent"/>
+        <Frame type="Label" name="PlayerName">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="170"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
+            <Text val="{$parent/PlayerInfo/Name/@StringValue}"/>
+            <Style val="RobotoCondensed15"/>
+        </Frame>
+
+        <Frame type="Label" name="WinLoss">
+            <Anchor side="Top" relative="$parent/PlayerName" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
+            <Text val="{$parent/PlayerInfo/WinLossText/@Text}"/>
+            <Style val="RobotoCondensed15"/>
+        </Frame>
+
+        <Frame type="Label" name="KillDeath">
+            <Anchor side="Top" relative="$parent/WinLoss" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
+            <Text val="{$parent/PlayerInfo/KillDeathText/@Text}"/>
+            <Style val="RobotoCondensed15"/>
+        </Frame>
+
+        <Frame type="Label" name="FastestWin">
+            <Anchor side="Top" relative="$parent/KillDeath" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
+            <Text val="{$parent/PlayerInfo/FastestWinText/@Text}"/>
+            <Style val="RobotoCondensed15"/>
+        </Frame>
+
+        <Frame type="PlayerFrame" name="PlayerInfo">
+            <PlayerId val="1"/>
+            <Frame type="DataRefFrame" name="Name">
+                <PlayerId val="{$parent/@PlayerId}"/>
+                <Argument name="GameValue" val="PlayerName"/>
+            </Frame>
+
+            <Frame type="TextFormatFrame" name="WinLossText">
+                <Anchor relative="$parent"/>
+                <FormatText val="%2% %0%/%1%"/>
+                <Replacement val="{$parent/Wins/@RealValue}" index="0"/>
+                <Replacement val="{$parent/Losses/@RealValue}" index="1"/>
+                <Replacement val="@Stats/WinLoss" index="2"/>
+            </Frame>
+
+            <Frame type="TextFormatFrame" name="KillDeathText">
+                <Anchor relative="$parent"/>
+                <FormatText val="%2% %0%/%1%"/>
+                <Replacement val="{$parent/Kills/@RealValue}" index="0"/>
+                <Replacement val="{$parent/Deaths/@RealValue}" index="1"/>
+                <Replacement val="@Stats/KillDeath" index="2"/>
+            </Frame>
+
+            <Frame type="TextFormatFrame" name="FastestWinText">
+                <FormatText val="%1% %0%"/>
+                <Replacement val="{$parent/FastestWin/@RealValue}" index="0"/>
+                <Replacement val="@Stats/FastestWin" index="1"/>
+            </Frame>
+
+            <Frame type="DataRefFrame" name="Wins" template="Stats/GetPlayerFromParent">
+                <Argument name="Score" val="Wins"/>
+            </Frame>
+            <Frame type="DataRefFrame" name="Losses" template="Stats/GetPlayerFromParent">
+                <Argument name="Score" val="Losses"/>
+            </Frame>
+            <Frame type="DataRefFrame" name="Kills" template="Stats/GetPlayerFromParent">
+                <Argument name="Score" val="Kills"/>
+            </Frame>
+            <Frame type="DataRefFrame" name="Deaths" template="Stats/GetPlayerFromParent">
+                <Argument name="Score" val="Deaths"/>
+            </Frame>
+            <Frame type="DataRefFrame" name="FastestWin" template="Stats/GetPlayerFromParent">
+                <Argument name="Score" val="FastestWin"/>
+            </Frame>
+            <Frame type="DataRefFrame" name="ShowProfile" template="Stats/GetPlayerFromParent">
+                <Argument name="Score" val="ShowProfile"/>
+            </Frame>
+        </Frame>
+    </Frame>
+
+    <Frame type="TabControl" name="PlayerStatsButtons">
         <Anchor side="Top" relative="$parent" pos="Min" offset="20"/>
         <Anchor side="Left" relative="$parent" pos="Min" offset="20"/>
 
@@ -85,26 +174,76 @@
             <Anchor side="Left" relative="$parent/PlayerStat11" pos="Min" offset="#StatPaddingSide"/>
             <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="12"/></Frame>
         </Frame>
+        <TabListItem val="PlayerStat1"/>
+        <TabListItem val="PlayerStat2"/>
+        <TabListItem val="PlayerStat3"/>
+        <TabListItem val="PlayerStat4"/>
+        <TabListItem val="PlayerStat5"/>
+        <TabListItem val="PlayerStat6"/>
+        <TabListItem val="PlayerStat7"/>
+        <TabListItem val="PlayerStat8"/>
+        <TabListItem val="PlayerStat9"/>
+        <TabListItem val="PlayerStat10"/>
+        <TabListItem val="PlayerStat11"/>
+        <TabListItem val="PlayerStat12"/>
+
+        <Frame type="Frame" name="PlayerStatPanel1" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="1"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel2" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="2"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel3" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="3"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel4" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="4"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel5" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="5"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel6" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="6"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel7" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="7"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel8" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="8"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel9" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="9"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel10" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="10"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel11" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="11"/></Frame>
+        </Frame>
+        <Frame type="Frame" name="PlayerStatPanel12" template="Stats/PlayerStatPanel">
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="12"/></Frame>
+        </Frame>
+
+        <PanelListItem val="PlayerStatPanel1"/>
+        <PanelListItem val="PlayerStatPanel2"/>
+        <PanelListItem val="PlayerStatPanel3"/>
+        <PanelListItem val="PlayerStatPanel4"/>
+        <PanelListItem val="PlayerStatPanel5"/>
+        <PanelListItem val="PlayerStatPanel6"/>
+        <PanelListItem val="PlayerStatPanel7"/>
+        <PanelListItem val="PlayerStatPanel8"/>
+        <PanelListItem val="PlayerStatPanel9"/>
+        <PanelListItem val="PlayerStatPanel10"/>
+        <PanelListItem val="PlayerStatPanel11"/>
+        <PanelListItem val="PlayerStatPanel12"/>
     </Frame>
 
     <Frame type="Frame" name="StatsPanel" template="Profile/ProfilePanel">
-        <Frame type="Frame" name="PlayerStats" template="Stats/PlayerStatsButtons">
+        <Frame type="TabControl" name="PlayerStats" template="Stats/PlayerStatsButtons">
             <Anchor side="Top" relative="$parent" pos="Min" offset="#StatMarginTop"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
             <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
-            <Height val="140"/>
-        </Frame>
-
-        <Frame type="Label" name="Frame">
-            <Anchor side="Top" relative="$parent/PlayerStats" pos="Min" offset="180"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
-            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
-            <Text val="{PlayerInfo/@RealValue}"/>
-
-            <Frame type="DataRefFrame" name="PlayerInfo">
-                <PlayerId val="1"/>
-                <Argument name="Score" val="Wins"/>
-            </Frame>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
         </Frame>
     </Frame>
 </Desc>
