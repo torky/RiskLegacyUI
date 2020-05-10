@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Frame type="Image" name="CurrencyBarBackground">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="50"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="-20"/>
+        <Height val="50"/>
+        <Width val="750"/>
+        <Color val="ffd700"/>
+        <Alpha val="50"/>
+        <Frame type="Image" name="CurrencyBarBackground">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Height val="50"/>
+            <Width val="{MineralsCurrent/@RealValue}"/>
+
+            <Frame type="DataRefFrame" name="MineralsCurrent">
+                <Argument name="Score" val="MineralsCurrent"/>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
+        <Frame type="Image" name="CurrencyBar" template="CurrencyBar/CurrencyBarBackground"></Frame>
+        
         <Frame type="Button" name="SkinsButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-207"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>

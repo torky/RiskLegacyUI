@@ -4,5 +4,6 @@
     <Include path="UI/RiskLegacy/Skins.SC2Layout"/>
     <Include path="UI/RiskLegacy/Profile.SC2Layout"/>
     <Include path="UI/RiskLegacy/Logs.SC2Layout"/>
+    <Include path="UI/RiskLegacy/CurrencyBar.SC2Layout"/>
     <Include path="UI/RiskLegacy/GameUIOverride.SC2Layout"/>
 </Desc>
