@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Frame" name="SettingsPanel" template="Profile/ProfilePanel">
+        <Frame type="Frame" name="Frame"></Frame>
+    </Frame>
+</Desc>

@@ -29,8 +29,8 @@
             <Text val="Settings"/>
         </Frame>
 
-        <Frame type="Frame" name="StatsPanel" template="Profile/ProfilePanel"></Frame>
-        <Frame type="Frame" name="SettingsPanel" template="Profile/ProfilePanel"></Frame>
+        <Frame type="Frame" name="StatsPanel" template="Stats/StatsPanel"></Frame>
+        <Frame type="Frame" name="SettingsPanel" template="Settings/SettingsPanel"></Frame>
 
         <TabListItem val="StatsTab"/>
         <TabListItem val="SettingsTab"/>
