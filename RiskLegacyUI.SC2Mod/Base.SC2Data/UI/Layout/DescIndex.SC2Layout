@@ -6,7 +6,5 @@
     <Include path="UI/RiskLegacy/Logs.SC2Layout"/>
     <Include path="UI/RiskLegacy/CurrencyBar.SC2Layout"/>
     <Include path="UI/RiskLegacy/GameUIOverride.SC2Layout"/>
-    <Include path="UI/RiskLegacy/Settings.SC2Layout"/>
-    <Include path="UI/RiskLegacy/Stats.SC2Layout"/>
     <Include path="UI/RiskLegacy/UIContainerOverride.SC2Layout"/>
 </Desc>

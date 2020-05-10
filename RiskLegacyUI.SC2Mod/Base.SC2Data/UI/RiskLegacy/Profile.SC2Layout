@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Constant name="ProfileTabWidth" val="255"/>
-    <Constant name="ProfileUIHeight" val="400"/>
-    <Constant name="ProfilePanelUIHeight" val="324"/>
+    <Constant name="ProfileUIHeight" val="500"/>
+    <Constant name="ProfilePanelUIHeight" val="424"/>
 
     <Frame type="Frame" name="ProfilePanel" template="Basics/Panel">
         <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
@@ -10,6 +10,9 @@
         <Width val="#UIWidth"/>
         <Height val="#ProfilePanelUIHeight"/>
     </Frame>
+
+    <Include path="UI/RiskLegacy/Settings.SC2Layout"/>
+    <Include path="UI/RiskLegacy/Stats.SC2Layout"/>
 
     <Frame type="TabControl" name="ProfileUI">
         <Width val="#UIWidth"/>

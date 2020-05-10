@@ -1,5 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
+    <Constant name="StatPaddingSide" val="74"/>
+    <Constant name="StatPaddingTop" val="70"/>
+    <Constant name="StatMarginTop" val="40"/>
+    <Constant name="StatMarginLeft" val="40"/>
+    <Constant name="StatMarginRight" val="-40"/>
+
+    <Frame type="Button" name="PlayerStatButton" template="StandardTemplates/StandardGlueButton">
+        <Height val="60"/>
+        <Width val="60"/>
+        <Label val="PlayerStat"/>
+        <Frame type="Label" name="PlayerStat">
+            <Style val="RobotoCondensed15"/>
+            <DescFlags val="Internal"/>
+        </Frame>
+        <Text val="{PlayerInfo/@PlayerId}"/>
+        <Visible val="{PlayerInfo/@User}"/>
+        <Frame type="PlayerFrame" name="PlayerInfo">
+            <PlayerId val="1"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="Frame" name="PlayerStatsButtons">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="20"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="20"/>
+
+        <Frame type="Button" name="PlayerStat1" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="1"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat2" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat1" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat1" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="2"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat3" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat2" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat2" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="3"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat4" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat3" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat3" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="4"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat5" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat4" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat4" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="5"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat6" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat5" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat5" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="6"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat7" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat1" pos="Min" offset="#StatPaddingTop"/>
+            <Anchor side="Left" relative="$parent/PlayerStat1" pos="Min" offset="0"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="7"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat8" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat7" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat7" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="8"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat9" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat8" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat8" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="9"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat10" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat9" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat9" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="10"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat11" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat10" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat10" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="11"/></Frame>
+        </Frame>
+        <Frame type="Button" name="PlayerStat12" template="Stats/PlayerStatButton">
+            <Anchor side="Top" relative="$parent/PlayerStat11" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PlayerStat11" pos="Min" offset="#StatPaddingSide"/>
+            <Frame type="PlayerFrame" name="PlayerInfo"><PlayerId val="12"/></Frame>
+        </Frame>
+    </Frame>
+
     <Frame type="Frame" name="StatsPanel" template="Profile/ProfilePanel">
+        <Frame type="Frame" name="PlayerStats" template="Stats/PlayerStatsButtons">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="#StatMarginTop"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
+            <Height val="140"/>
+        </Frame>
+
+        <Frame type="Label" name="Frame">
+            <Anchor side="Top" relative="$parent/PlayerStats" pos="Min" offset="180"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#StatMarginLeft"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#StatMarginRight"/>
+            <Text val="{PlayerInfo/@RealValue}"/>
+
+            <Frame type="DataRefFrame" name="PlayerInfo">
+                <PlayerId val="1"/>
+                <Argument name="Score" val="Wins"/>
+            </Frame>
+        </Frame>
     </Frame>
 </Desc>
