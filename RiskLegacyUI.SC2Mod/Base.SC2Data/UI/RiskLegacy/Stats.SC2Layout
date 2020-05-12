@@ -62,8 +62,7 @@
 
         <Frame type="PlayerFrame" name="PlayerInfo">
             <PlayerId val="1"/>
-            <Frame type="DataRefFrame" name="Name">
-                <PlayerId val="{$parent/@PlayerId}"/>
+            <Frame type="DataRefFrame" name="Name" template="Stats/GetPlayerFromParent">
                 <Argument name="GameValue" val="PlayerName"/>
             </Frame>
 
