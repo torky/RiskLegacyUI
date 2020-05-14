@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
+
+    <Frame type="CheckBox" name="CheckBoxFrame" template="StandardTemplates/StandardCheckBoxLabelTemplate">
+        <Width val="400"/>
+        <Height val="40"/>
+        <Frame type="Label" name="Label">
+            <Width val="350"/>
+            <Style val="RobotoLight12"/>
+            <Options val="NewLineIfTruncated"/>
+        </Frame>
+    </Frame>
+
     <Frame type="Frame" name="SettingsPanel" template="Profile/ProfilePanel">
+        <!-- Admin -->
+        <Frame type="Label" name="IsAdmin">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+            <Text val="Admin"/>
+            <Style val="RobotoCondensed15"/>
+            <CollapseLayout val="True"/>
+        </Frame>
+
+        <!-- Ping Bases -->
+        <Frame type="CheckBox" name="PingBases" template="Settings/CheckBoxFrame">
+            <Anchor side="Top" relative="$parent/IsAdmin" pos="Min" offset="80"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+            <Frame type="Label" name="Label">
+                <Text val="Ping bases at the beginning of the game"/>
+            </Frame>
+        </Frame>
+        
+        <!-- Show Flags -->
+        <Frame type="CheckBox" name="ShowFlags" template="Settings/CheckBoxFrame">
+            <Anchor side="Top" relative="$parent/PingBases" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+            <Frame type="Label" name="Label">
+                <Text val="Shows flags, doesn't impact lag"/>
+            </Frame>
+        </Frame>
+
+        <!-- Show Profile -->
+        <Frame type="CheckBox" name="ShowProfile" template="Settings/CheckBoxFrame">
+            <Anchor side="Top" relative="$parent/ShowFlags" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+            <Frame type="Label" name="Label">
+                <Text val="Allows other players to view your profile"/>
+            </Frame>
+        </Frame>
+
+        <!-- Show Kill Value -->
+        <Frame type="CheckBox" name="ShowKillValue" template="Settings/CheckBoxFrame">
+            <Anchor side="Top" relative="$parent/ShowProfile" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+            <Frame type="Label" name="Label">
+                <Text val="Display rekt score, deselect for kills and deaths"/>
+            </Frame>
+        </Frame>
     </Frame>
 </Desc>
