@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
-    <Constant name="SkinPanelHeight" val="174"/>
     <Constant name="SkinTabWidth" val="170"/>
-    <Constant name="SkinUIHeight" val="250"/>
+    <Constant name="SkinUIHeight" val="370"/>
     <Constant name="SkinButtonHeight" val="84"/>
     <Constant name="SkinButtonWidth" val="91"/>
     <Constant name="SkinButtonSideMargin" val="7"/>
     <Constant name="SkinButtonTopMargin" val="4"/>
     <Constant name="TopMargin" val="20"/>
-    <Constant name="SideMargin" val="39"/>
-    <Constant name="ButtonTopMargin" val="76"/>
+    <Constant name="SideMargin" val="27"/>
+    <Constant name="ButtonsRowTopMargin" val="61"/>
+    <Constant name="ButtonRowTopMargin" val="91"/>
 
     <Frame type="Button" name="SkinButton" template="Basics/Button">
         <Height val="#SkinButtonHeight"/>
@@ -22,21 +22,13 @@
         <Visible val="True"/>
     </Frame>
 
-    <Frame type="Frame" name="SkinPanel" template="Basics/Panel">
-        <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
+    <Frame type="Frame" name="ButtonRow">
+        <Height val="100"/>
         <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-        <Width val="#UIWidth"/>
-        <Height val="#SkinPanelHeight"/>
-
-        <Frame type="Pulldown" name="UnitSelect" template="StandardTemplates/StandardPulldownTemplate">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="#TopMargin"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
-            <Width val="300"/>
-        </Frame>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>    
 
         <Frame type="Button" name="Button0" template="Skins/SkinButton">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="#ButtonTopMargin"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="#SideMargin"/>
         </Frame>
 
@@ -61,40 +53,27 @@
         </Frame>
     </Frame>
 
-    <Frame type="TabControl" name="SkinsUI">
+    <Frame type="Frame" name="SkinUI" template="Basics/Panel">
         <Width val="#UIWidth"/>
         <Height val="#SkinUIHeight"/>
-  
-        <Frame type="Button" name="KillSkinTab" template="Basics/TabButton">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+
+        <Frame type="Pulldown" name="UnitSelect" template="StandardTemplates/StandardPulldownTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="#TopMargin"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-            <Width val="#SkinTabWidth"/>
-            <Text val="Kills"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Width val="300"/>
         </Frame>
-  
-        <Frame type="Button" name="WinSkinTab" template="Basics/TabButton">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-            <Anchor side="Left" relative="$parent/KillSkinTab" pos="Min" offset="#SkinTabWidth"/>
-            <Width val="#SkinTabWidth"/>
-            <Text val="Wins"/>
+
+        <Frame type="Frame" name="Kills" template="Skins/ButtonRow">
+            <Anchor side="Top" relative="$parent/UnitSelect" pos="Min" offset="#ButtonsRowTopMargin"/>
         </Frame>
-  
-        <Frame type="Button" name="PrizeSkinTab" template="Basics/TabButton">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-            <Anchor side="Left" relative="$parent/WinSkinTab" pos="Min" offset="#SkinTabWidth"/>
-            <Width val="#SkinTabWidth"/>
-            <Text val="Prizes"/>
+
+        <Frame type="Frame" name="Wins" template="Skins/ButtonRow">
+            <Anchor side="Top" relative="$parent/Kills" pos="Min" offset="#ButtonRowTopMargin"/>
         </Frame>
-  
-        <Frame type="Frame" name="KillSkinPanel" template="Skins/SkinPanel"></Frame>
-        <Frame type="Frame" name="WinSkinPanel" template="Skins/SkinPanel"></Frame>
-        <Frame type="Frame" name="PrizeSkinPanel" template="Skins/SkinPanel"></Frame>
-  
-        <TabListItem val="KillSkinTab"/>
-        <TabListItem val="WinSkinTab"/>
-        <TabListItem val="PrizeSkinTab"/>
-        <PanelListItem val="KillSkinPanel"/>
-        <PanelListItem val="WinSkinPanel"/>
-        <PanelListItem val="PrizeSkinPanel"/>
+
+        <Frame type="Frame" name="Prizes" template="Skins/ButtonRow">
+            <Anchor side="Top" relative="$parent/Wins" pos="Min" offset="#ButtonRowTopMargin"/>
+        </Frame>
     </Frame>
 </Desc>

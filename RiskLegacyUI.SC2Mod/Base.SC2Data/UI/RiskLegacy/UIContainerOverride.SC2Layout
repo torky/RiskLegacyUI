@@ -22,7 +22,7 @@
             <Text val="Logs"/>
         </Frame>
 
-        <Frame type="TabControl" name="SkinsUI" template="Skins/SkinsUI">
+        <Frame type="Frame" name="SkinsUI" template="Skins/SkinUI">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>

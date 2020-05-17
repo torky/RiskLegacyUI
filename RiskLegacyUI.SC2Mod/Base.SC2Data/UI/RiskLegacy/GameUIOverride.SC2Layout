@@ -218,9 +218,17 @@
     </Frame>
 
     <Frame type="ControlGroupPanel" name="GameUI/UIContainer/ConsoleUIContainer/ControlGroupPanel" file="GameUI">
-        <Anchor side="Right" relative="$parent" pos="Min" offset="275"/>
-        <Anchor side="Left" relative="$parent" pos="Max" offset="500"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="580"/>
+        <Anchor side="Right" relative="$this" pos="0" offset="0"/>
+        <Width val="770"/>
         <Anchor side="Bottom" relative="$parent" pos="Max" offset="-103"/>
+        <StateGroup name="AlignmentRatioCheck">
+            <DefaultState val="CenterAligned"/>
+            <State name="LeftAligned">
+            </State>
+            <State name="CenterAligned">
+            </State>
+        </StateGroup>
     </Frame>
 
     <Frame type="MissionTimePanel" name="GameUI/UIContainer/ConsoleUIContainer/MissionTimePanel" file="GameUI">
@@ -239,7 +247,9 @@
     <Frame type="Frame" name="GameUI/UIContainer/FullscreenUpperContainer" file="GameUI">
         <Frame type="GameMessageDisplay" name="ChatDisplay">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-240"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="810" />
+            <Anchor side="Left" relative="$parent" pos="Min" offset="580" />
+            <Anchor side="Right" relative="$this" pos="0" offset="0"/>
+
         </Frame>
     </Frame>
 
@@ -266,8 +276,7 @@
                 <!-- Chat Bar Positioning -->
                 <Frame type="Frame" name="ChatBarAnchorFrame">
                     <Anchor side="Top" relative="$parent" pos="Max" offset="-240"/>
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="310" />
-                    <Anchor side="Right" relative="$parent" pos="Min" offset="810"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="550" />
                     <Width val="24" />
                     <Height val="24" />
                     <Visible val="False" />
