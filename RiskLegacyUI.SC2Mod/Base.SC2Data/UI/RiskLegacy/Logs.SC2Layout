@@ -1,40 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
-    <Constant name="LogsTabWidth" val="255"/>
-    <Constant name="LogsUIHeight" val="500"/>
-    <Constant name="LogsPanelUIHeight" val="424"/>
-
-    <Frame type="Frame" name="LogsPanel" template="Basics/Panel">
-        <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
-        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-        <Width val="#UIWidth"/>
-        <Height val="#LogsPanelUIHeight"/>
+    <Frame type="Slider" name="MapTurnSlider" template="StandardTemplates/StandardSliderTemplate">
+        <Anchor side="Top" relative="$parent" pos="Max" offset="#NextCheckboxGap"/>
+        <Anchor side="Left" relative="$parent" pos="Max" offset="#SliderLeftFromMaxLeft"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="#SliderRightFromMax"/>
+        <Tooltip val="Select the turn history to view."/>
+        <StepValue val="1"/>
     </Frame>
 
-    <Frame type="TabControl" name="LogsUI">
-        <Width val="#UIWidth"/>
-        <Height val="#LogsUIHeight"/>
-
-        <Frame type="Button" name="MessagesTab" template="Basics/TabButton">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-            <Width val="#LogsTabWidth"/>
-            <Text val="Messages"/>
+    <Frame type="Label" name="MapTurnLabel">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Width val="300"/>
+        <Height val="30"/>
+        <Style val="RobotoCondensed15"/>
+        <Text val="{$this/TurnText/@Text}"/>
+        <Frame type="TextFormatFrame" name="TurnText">
+            <Anchor relative="$parent"/>
+            <FormatText val="Viewing Turn: %0%"/>
+            <Replacement val="{$ancestor[@type=TriggerDialogFrame]/MapTurnSlider/@Value}" index="0"/>
         </Frame>
-
-        <Frame type="Button" name="MapLogTab" template="Basics/TabButton">
-            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-            <Anchor side="Left" relative="$parent/MessagesTab" pos="Min" offset="#LogsTabWidth"/>
-            <Width val="#LogsTabWidth"/>
-            <Text val="Map"/>
-        </Frame>
-
-        <Frame type="Frame" name="MessagesPanel" template="Logs/LogsPanel"></Frame>
-        <Frame type="Frame" name="MapLogPanel" template="Logs/LogsPanel"></Frame>
-
-        <TabListItem val="MessagesTab"/>
-        <TabListItem val="MapLogTab"/>
-        <PanelListItem val="MessagesPanel"/>
-        <PanelListItem val="MapLogPanel"/>
     </Frame>
 </Desc>

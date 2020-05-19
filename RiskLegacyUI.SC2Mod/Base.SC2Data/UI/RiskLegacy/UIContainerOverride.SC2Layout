@@ -19,7 +19,7 @@
         <Frame type="Button" name="LogsButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-27"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="368"/>
-            <Text val="Logs"/>
+            <Text val="Map Log"/>
         </Frame>
 
         <Frame type="Frame" name="SkinsUI" template="Skins/SkinUI">
@@ -28,11 +28,6 @@
         </Frame>
 
         <Frame type="TabControl" name="ProfileUI" template="Profile/ProfileUI">
-            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-        </Frame>
-
-        <Frame type="TabControl" name="LogsUI" template="Logs/LogsUI">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-370"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>
@@ -88,16 +83,6 @@
             <State name="ProfileOff">
                 <When type="Property" frame="$this/ProfileButton" Toggled="False"/>
                 <Action type="SetProperty" frame="$this/ProfileUI" Visible="False"/>
-            </State>
-        </StateGroup>
-        <StateGroup name="LogsGroup">
-            <State name="Logs">
-                <When type="Property" frame="$this/LogsButton" Toggled="True"/>
-                <Action type="SetProperty" frame="$this/LogsUI" Visible="True"/>
-            </State>
-            <State name="LogsOff">
-                <When type="Property" frame="$this/LogsButton" Toggled="False"/>
-                <Action type="SetProperty" frame="$this/LogsUI" Visible="False"/>
             </State>
         </StateGroup>
     </Frame>
