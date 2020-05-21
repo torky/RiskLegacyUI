@@ -48,18 +48,9 @@
             </Frame>
         </Frame>
 
-        <!-- Show Kill Value -->
-        <Frame type="CheckBox" name="ShowKillValue" template="Settings/CheckBoxFrame">
-            <Anchor side="Top" relative="$parent/ShowProfile" pos="Min" offset="40"/>
-            <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
-            <Frame type="Label" name="Label">
-                <Text val="Display rekt score, deselect for kills and deaths"/>
-            </Frame>
-        </Frame>
-
         <!-- Auto Cards Value -->
         <Frame type="CheckBox" name="AutoCards" template="Settings/CheckBoxFrame">
-            <Anchor side="Top" relative="$parent/ShowKillValue" pos="Min" offset="40"/>
+            <Anchor side="Top" relative="$parent/ShowProfile" pos="Min" offset="40"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
             <Frame type="Label" name="Label">
                 <Text val="Automatically converts your cards to minerals"/>
