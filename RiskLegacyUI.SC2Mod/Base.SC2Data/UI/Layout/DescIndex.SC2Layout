@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Include path="UI/RiskLegacy/Basics.SC2Layout"/>
+    <Include path="UI/RiskLegacy/GameDataLabels.SC2Layout"/>
     <Include path="UI/RiskLegacy/Skins.SC2Layout"/>
     <Include path="UI/RiskLegacy/Profile.SC2Layout"/>
     <Include path="UI/RiskLegacy/Logs.SC2Layout"/>

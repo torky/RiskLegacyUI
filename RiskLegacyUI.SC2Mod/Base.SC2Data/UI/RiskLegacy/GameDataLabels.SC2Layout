@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+   <Frame type="Label" name="DataLabel">
+      <Width val="95"/>
+      <Height val="32"/>
+      <Style val="ResourcePanel"/>
+      <Text val="0" />
+   </Frame>
+</Desc>

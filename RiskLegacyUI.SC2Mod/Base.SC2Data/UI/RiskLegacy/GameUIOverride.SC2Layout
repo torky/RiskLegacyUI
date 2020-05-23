@@ -81,14 +81,14 @@
             <TooltipAnchorPosition val="BottomLeft"/>
         </Frame>
 
-        <Frame type="CountdownLabel" name="ResourceLabel3" template="ResourcePanel/ResourcePanelLabelTemplate">
+        <Frame type="Label" name="TurnDisplay" template="GameDataLabels/DataLabel">
             <Anchor side="Top" relative="$parent/ResourceLabel0" pos="Min" offset="0"/>
             <Anchor side="Right" relative="$parent/ResourceIcon0" pos="Min" offset="-5"/>
         </Frame>
 
         <Frame type="Image" name="ResourceIconBackground3" template="ResourcePanel/ResourcePanelIconBackgroundTemplate">
             <Anchor side="Top" relative="$parent/ResourceIconBackground0" pos="Min" offset="0"/>
-            <Anchor side="Right" relative="$parent/ResourceLabel3" pos="Min" offset="-5"/>
+            <Anchor side="Right" relative="$parent/TurnDisplay" pos="Min" offset="-5"/>
         </Frame>
 
         <Frame type="Image" name="ResourceIcon3" template="ResourcePanel/ResourcePanelIconTemplate">
@@ -97,14 +97,19 @@
             <TooltipAnchorPosition val="BottomLeft"/>
         </Frame>
 
-        <Frame type="CountdownLabel" name="ResourceLabel2" template="ResourcePanel/ResourcePanelLabelTemplate">
-            <Anchor side="Top" relative="$parent/ResourceLabel3" pos="Min" offset="0"/>
+        <Frame type="Label" name="TimeDisplay" template="GameDataLabels/DataLabel">
+            <Anchor side="Top" relative="$parent/TurnDisplay" pos="Min" offset="0"/>
             <Anchor side="Right" relative="$parent/ResourceIcon3" pos="Min" offset="-5"/>
+        </Frame>
+
+        <Frame type="CountdownLabel" name="ResourceLabel2" template="ResourcePanel/ResourcePanelLabelTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-50"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="50"/>
         </Frame>
 
         <Frame type="Image" name="ResourceIconBackground2" template="ResourcePanel/ResourcePanelIconBackgroundTemplate">
             <Anchor side="Top" relative="$parent/ResourceIconBackground3" pos="Min" offset="0"/>
-            <Anchor side="Right" relative="$parent/ResourceLabel2" pos="Min" offset="-5"/>
+            <Anchor side="Right" relative="$parent/TimeDisplay" pos="Min" offset="-5"/>
         </Frame>
 
         <Frame type="Image" name="ResourceIcon2" template="ResourcePanel/ResourcePanelIconTemplate">
@@ -113,7 +118,6 @@
             <TooltipAnchorPosition val="BottomLeft"/>
         </Frame>
     </Frame>
-
 
     <Frame type="MinimapPanel" name="GameUI/UIContainer/ConsoleUIContainer/MinimapPanel" file="GameUI">
         <Frame type="Button" name="PingButton">
