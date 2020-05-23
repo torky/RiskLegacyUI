@@ -107,6 +107,11 @@
             <Anchor side="Right" relative="$parent" pos="Max" offset="50"/>
         </Frame>
 
+        <Frame type="CountdownLabel" name="ResourceLabel3" template="ResourcePanel/ResourcePanelLabelTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="-50"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="50"/>
+        </Frame>
+
         <Frame type="Image" name="ResourceIconBackground2" template="ResourcePanel/ResourcePanelIconBackgroundTemplate">
             <Anchor side="Top" relative="$parent/ResourceIconBackground3" pos="Min" offset="0"/>
             <Anchor side="Right" relative="$parent/TimeDisplay" pos="Min" offset="-5"/>
