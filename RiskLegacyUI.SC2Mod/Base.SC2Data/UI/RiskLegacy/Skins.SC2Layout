@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
     <Constant name="SkinTabWidth" val="170"/>
-    <Constant name="SkinUIHeight" val="370"/>
+    <Constant name="SkinUIHeight" val="470"/>
     <Constant name="SkinButtonHeight" val="84"/>
     <Constant name="SkinButtonWidth" val="91"/>
     <Constant name="SkinButtonSideMargin" val="7"/>
@@ -71,8 +71,12 @@
             <Anchor side="Top" relative="$parent/Kills" pos="Min" offset="#ButtonRowTopMargin"/>
         </Frame>
 
-        <Frame type="Frame" name="Prizes" template="Skins/ButtonRow">
+        <Frame type="Frame" name="WinRate" template="Skins/ButtonRow">
             <Anchor side="Top" relative="$parent/Wins" pos="Min" offset="#ButtonRowTopMargin"/>
+        </Frame>
+
+        <Frame type="Frame" name="Prizes" template="Skins/ButtonRow">
+            <Anchor side="Top" relative="$parent/WinRate" pos="Min" offset="#ButtonRowTopMargin"/>
         </Frame>
     </Frame>
 </Desc>
