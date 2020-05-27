@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Button" name="MinimizeButton">
+        <Toggleable val="True"/>
+        <RenderPriority val="520"/>
+        <Visible val="True"/>
+        <Width val="32"/>
+        <Height val="32"/>
+        <NormalImage val="theNormal"/>
+        <HoverImage val="theHover"/>
+        <ClickSound val="@UI_ActionButtonSelect"/>
+
+        <Frame type="Image" name="theNormal">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="Assets\Textures\ui_button_unbindkey_normalpressed_bnet.dds"/>
+            <TextureType val="Normal"/>
+            <StateCount val="2"/>
+        </Frame>
+
+        <Frame type="Image" name="theHover">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="Assets\Textures\ui_button_unbindkey_normaloverpressedover_bnet.dds"/>
+            <TextureType val="Normal"/>
+            <StateCount val="2"/>
+        </Frame>
+    </Frame>
+    
+    <Frame type="Frame" name="Rows">
+        <Width val="300"/>
+        <Height val="50"/>
+    </Frame>
+    <Frame type="Label" name="col1">
+        <Height val="50"/>
+        <Width val="100"/>
+        <Style val="RobotoCondensed15"/>
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+    </Frame>
+    <Frame type="Label" name="col2">
+        <Height val="50"/>
+        <Width val="100"/>
+        <Style val="RobotoCondensed15"/>
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="100"/>
+    </Frame>
+    <Frame type="Label" name="col3">
+        <Height val="50"/>
+        <Width val="100"/>
+        <Style val="RobotoCondensed15"/>
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="250"/>
+    </Frame>
+</Desc>

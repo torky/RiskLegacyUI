@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Constant name="titleText" val="Required Score: 5"/>
+    <Constant name="titleStyle" val="VSFont"/>
+    <Constant name="offSetLeft" val="30"/>
+    <Constant name="offSetTop" val="50"/>
+    <Constant name="rowWidth" val="15"/>
+
+    <Constant name="offSetCol1" val="0"/>
+    <Constant name="offSetCol2" val="150"/>
+    <Constant name="offSetCol3" val="300"/>
+    <Constant name="generalFont" val="RobotoLight12"/>
+    <Constant name="titleFont" val="UnitSkinToolTip"/>
+    <Frame type="Frame" name="KOTHScorePanel" template="KingOfTheHill/KOTHPanel">
+        <Frame type="Label" name="title">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="15"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/> 
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/> 
+            <Text val="#titleText"/>
+            <Style val="#titleStyle"/>
+        </Frame>
+        <Frame type="Frame" name="Row0">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="#offSetTop"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/> 
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="Name"/>
+                <Style val="#titleFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="Wins"/>
+                <Style val="#titleFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="Losses"/>
+                <Style val="#titleFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row1">
+            <Anchor side="Top" relative="$parent/Row0" pos="Min" offset="30"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/> 
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row2">
+            <Anchor side="Top" relative="$parent/Row1" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="Nanos"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="25"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="125"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row3">
+            <Anchor side="Top" relative="$parent/Row2" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row4">
+            <Anchor side="Top" relative="$parent/Row3" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row5">
+            <Anchor side="Top" relative="$parent/Row4" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row6">
+            <Anchor side="Top" relative="$parent/Row5" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row7">
+            <Anchor side="Top" relative="$parent/Row6" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row8">
+            <Anchor side="Top" relative="$parent/Row7" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row9">
+            <Anchor side="Top" relative="$parent/Row8" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row10">
+            <Anchor side="Top" relative="$parent/Row9" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Frame" name="Row11">
+            <Anchor side="Top" relative="$parent/Row10" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+        
+        <Frame type="Frame" name="Row12">
+            <Anchor side="Top" relative="$parent/Row11" pos="Min" offset="#rowWidth"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetLeft"/>
+            <Width val="500"/>
+            <Height val="50"/>
+            <Frame type="Label" name="col1">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol1"/>
+            </Frame>
+            <Frame type="Label" name="col2">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol2"/>
+            </Frame>
+            <Frame type="Label" name="col3">
+                <Height val="50"/>
+                <Width val="100"/>
+                <Text val="test"/>
+                <Style val="#generalFont"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="#offSetCol3"/>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

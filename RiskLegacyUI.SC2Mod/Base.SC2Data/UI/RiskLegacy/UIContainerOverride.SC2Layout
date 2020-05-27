@@ -3,6 +3,29 @@
     <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
         <Frame type="Image" name="CurrencyBar" template="CurrencyBar/CurrencyBarBackground"></Frame>
         
+        <!--KOTH UI-->
+        <Frame type="Button" name="KOTHButton" template="GameModeUI/MinimizeButton">
+            <Visible val="False"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+
+        <Frame type="TabControl" name="KingOfTheHillUI" template="KingOfTheHill/KingOfTheHillUI">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+
+        <StateGroup name="KingOfTheHillGroup">
+            <State name="KOTH">
+                <When type="Property" frame="$this/KOTHButton" Toggled="True"/>
+                <Action type="SetProperty" frame="$this/KingOfTheHillUI" Visible="True"/>
+            </State>
+            <State name="KOTHOff">
+                <When type="Property" frame="$this/KOTHButton" Toggled="False"/>
+                <Action type="SetProperty" frame="$this/KingOfTheHillUI" Visible="False"/>
+            </State>
+        </StateGroup>
+
         <!-- Skins, Profile, and Logs UI-->
         <Frame type="Button" name="SkinsButton" template="Basics/ToggleButton">
             <Anchor side="Bottom" relative="$parent" pos="Max" offset="-207"/>
