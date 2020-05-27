@@ -5,6 +5,7 @@
         
         <!--KOTH UI-->
         <Frame type="Button" name="KOTHButton" template="GameModeUI/MinimizeButton">
+            <Visible val="False"/>
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
         </Frame>
