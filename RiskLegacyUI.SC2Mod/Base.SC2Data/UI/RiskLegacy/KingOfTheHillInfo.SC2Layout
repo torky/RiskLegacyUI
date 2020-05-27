@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Frame" name="KOTHInfoPanel" template="KingOfTheHill/KOTHPanel">
+        <Constant name="KOTHNameWidth" val="200"/>
+
+        <Frame type="Label" name="VS">
+            <Text val="VS"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Style val="VSFont"/>
+            <Width val="#UIWidth"/>
+        </Frame>
+
+        <Frame type="Label" name="upNext">
+            <Text val="Up Next:"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="100"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Style val="RobotoCondensed15"/>
+            <Width val="#UIWidth"/>
+        </Frame>
+
+        <Frame type="Image" name="Player1Image">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="20"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="20"/>
+            <Texture val="Assets\Textures\sc2_ui_collection_warchest_comicbutton_hover.dds"/>
+            <TextureType val="EndCap"/>
+            <StateCount val="1"/>
+            <Width val="#KOTHNameWidth"/>
+
+            <Frame type="Label" name="Player1Label">
+                <Text val="Player1"/>
+                <Anchor side="Top" relative="$parent" pos="Mid" offset="-15"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Style val="RobotoCondensed15"/>
+                <Color val="149,202,255"/>
+                <Width val="#KOTHNameWidth"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Image" name="Player2Image">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="20"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-20"/>
+            <Texture val="Assets\Textures\sc2_ui_collection_warchest_comicbutton_hover.dds"/>
+            <TextureType val="EndCap"/>
+            <StateCount val="1"/>
+            <Width val="#KOTHNameWidth"/>
+
+            <Frame type="Label" name="Player2Label">
+                <Text val="Player1LMFAO"/>
+                <Anchor side="Top" relative="$parent" pos="Mid" offset="-15"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Style val="RobotoCondensed15"/>
+                <Color val="149,202,255"/>
+                <Width val="#KOTHNameWidth"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Image" name="Player3Image">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="125"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-20"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="20"/>
+            <Texture val="Assets\Textures\sc2_ui_collection_warchest_comicbutton_hover.dds"/>
+            <TextureType val="EndCap"/>
+            <StateCount val="1"/>
+            <Width val="#KOTHNameWidth"/>
+
+            <Frame type="Label" name="Player3Label">
+                <Text val="Player3"/>
+                <Anchor side="Top" relative="$parent" pos="Mid" offset="-15"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Style val="RobotoCondensed15"/>
+                <Color val="149,202,255"/>
+                <Width val="#KOTHNameWidth"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="Button" name="OptOut">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="190"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-25"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="25"/>
+            <Width val="120"/>
+            <Height val="60"/>
+            <Text val="Opt-Out"/>
+            <RenderPriority val="520"/>
+            <Visible val="True"/>
+
+            <NormalImage val="NormalImage"/>
+            <HoverImage val="HoverImage"/>
+            <Label val="Label"/>
+            <ClickSound val="@UI_ActionButtonSelect"/>
+
+            <Frame type="Image" name="NormalImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Texture val="Risk/ui_battlenet_challenge_button_normalpressed.dds"/>
+                <TextureType val="NineSlice"/>
+                <StateCount val="2"/>
+            </Frame>
+
+            <Frame type="Image" name="HoverImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Texture val="Risk/ui_battlenet_challenge_button_normaloverpressedover.dds"/>
+                <TextureType val="NineSlice"/>
+                <StateCount val="2"/>
+            </Frame>
+                    
+            <Frame type="Label" name="Label">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Style val="RobotoCondensed15"/>
+                <Color val="149,202,255"/>
+            </Frame>
+
+        </Frame>
+
+        <Frame type="Button" name="Surrender">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="190"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-25"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="300"/>
+            <Width val="140"/>
+            <Height val="60"/>
+            <Text val="Surrender"/>
+            <RenderPriority val="520"/>
+            <Visible val="True"/>
+
+            <NormalImage val="NormalImage"/>
+            <HoverImage val="HoverImage"/>
+            <Label val="Label"/>
+            <ClickSound val="@UI_ActionButtonSelect"/>
+            
+            <Frame type="Image" name="NormalImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Texture val="Risk/ui_battlenet_challenge_button_normalpressed.dds"/>
+                <ColorAdjustMode val="Colorize"/>
+                <AdjustmentColor val="150,255,100"/>
+                <TextureType val="NineSlice"/>
+                <StateCount val="2"/>
+            </Frame>
+
+            <Frame type="Image" name="HoverImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Texture val="Risk/ui_battlenet_challenge_button_normaloverpressedover.dds"/>
+                <ColorAdjustMode val="Colorize"/>
+                <AdjustmentColor val="150,255,100"/>
+                <TextureType val="NineSlice"/>
+                <StateCount val="2"/>
+            </Frame>
+                    
+            <Frame type="Label" name="Label">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Style val="RobotoCondensed15"/>
+                <Color val="150,255,100"/>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

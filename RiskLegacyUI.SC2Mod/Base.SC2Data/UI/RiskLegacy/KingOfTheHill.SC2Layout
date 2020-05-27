@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Constant name="MinimizeButtonWidth" val="45"/>
+    <Constant name="KOTHUIHeight" val="350"/>
+    <Constant name="KOTHPanelUIHeight" val="274"/>
+
+    <Frame type="Frame" name="KOTHPanel" template="Basics/Panel">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Width val="#UIWidth"/>
+        <Height val="#KOTHPanelUIHeight"/>
+    </Frame>
+
+    <Include path="UI/RiskLegacy/KingOfTheHillInfo.SC2Layout"/>
+    <Include path="UI/RiskLegacy/KingOfTheHillScore.SC2Layout"/>
+
+    <Frame type="TabControl" name="KingOfTheHillUI">
+        <Width val="#UIWidth"/>
+        <Height val="#KOTHUIHeight"/>
+
+        <Frame type="Button" name="KOTHInfoTab" template="Basics/TabButton">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Width val="#ProfileTabWidth"/>
+            <Text val="Info"/>
+        </Frame>
+
+        <Frame type="Button" name="KOTHScoreTab" template="Basics/TabButton">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="#ProfileTabWidth"/>
+            <Width val="#ProfileTabWidth"/>
+            <Text val="Score"/>
+        </Frame>
+
+        <Frame type="Frame" name="KOTHInfoPanel" template="KingOfTheHillInfo/KOTHInfoPanel"></Frame>
+        <Frame type="Frame" name="KOTHScorePanel" template="KingOfTheHillScore/KOTHScorePanel"></Frame>
+
+        <TabListItem val="KOTHInfoTab"/>
+        <TabListItem val="KOTHScoreTab"/>
+        <PanelListItem val="KOTHInfoPanel"/>
+        <PanelListItem val="KOTHScorePanel"/>
+    </Frame>
+
+    <Frame type="Frame" name="KingOfTheHillPanel" template="Basics/Panel">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="#TabHeight"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Width val="#UIWidth"/>
+        <Height val="#KOTHPanelUIHeight"/>
+    </Frame>
+</Desc>
