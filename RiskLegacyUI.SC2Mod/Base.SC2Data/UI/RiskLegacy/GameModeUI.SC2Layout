@@ -18,6 +18,7 @@
             <Texture val="Assets\Textures\ui_button_unbindkey_normalpressed_bnet.dds"/>
             <TextureType val="Normal"/>
             <StateCount val="2"/>
+            <Rotation val="90"/>
         </Frame>
 
         <Frame type="Image" name="theHover">
@@ -28,6 +29,7 @@
             <Texture val="Assets\Textures\ui_button_unbindkey_normaloverpressedover_bnet.dds"/>
             <TextureType val="Normal"/>
             <StateCount val="2"/>
+            <Rotation val="90"/>
         </Frame>
     </Frame>
     
